@@ -1,0 +1,42 @@
+{
+  "info": {
+    "name": "MiniInvest APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/health"
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\\n  \\\"email\\\": \\\"demo@invest.local\\\",\\n  \\\"password\\\": \\\"Demo@123\\\"\\n}"
+        },
+        "url": "{{base_url}}/auth/login"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000/api"
+    },
+    {
+      "key": "user_token",
+      "value": ""
+    }
+  ]
+}
